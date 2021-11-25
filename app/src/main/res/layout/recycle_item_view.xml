@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:padding="10dp"
+    android:background="@drawable/itemview_border"
+    >
+
+    <TextView
+        android:id="@+id/uniName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/univerity_name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/uniprovince"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/univerity_name"
+        android:textSize="16sp"
+        android:layout_below="@+id/uniName"
+        />
+    <TextView
+        android:id="@+id/uniState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/univerity_name"
+        android:textSize="16sp"
+        android:layout_below="@+id/uniprovince"
+        />
+
+    <TextView
+        android:id="@+id/uniCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/univerity_name"
+        android:textSize="16sp"
+        android:layout_below="@+id/uniState"
+        />
+
+
+</RelativeLayout>

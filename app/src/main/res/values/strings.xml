@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ApiCallingWithRetrofit</string>
+    <string name="univerity_name">University name</string>
+</resources>
