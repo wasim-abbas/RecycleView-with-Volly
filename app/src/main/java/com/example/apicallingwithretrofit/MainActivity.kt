@@ -1,13 +1,15 @@
 package com.example.apicallingwithretrofit
 
 import android.Manifest
-import android.content.Intent
+import android.content.DialogInterface
 import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -24,7 +26,7 @@ class MainActivity : AppCompatActivity(), ItemClickListenerCallBack {
     companion object {
         private const val TAG = "Hello"
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.INTERNET)
-        private const val REQUEST_CODE_PERMISSIONS = 160
+        private const val PERMISSION_REQUEST_CODE = 160
     }
 
 
@@ -32,21 +34,12 @@ class MainActivity : AppCompatActivity(), ItemClickListenerCallBack {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Request camera permissions
+        // Request Internet permissions
         if (allPermissionsGranted()) {
             loadRecycview()
         } else {
             ActivityCompat.requestPermissions(
-                this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS
-            )
-        }
-
-
-    }
-
-    fun kprogressHud() {
-
-
+                this, REQUIRED_PERMISSIONS, PERMISSION_REQUEST_CODE) }
     }
 
     fun loadRecycview() {
@@ -69,7 +62,7 @@ class MainActivity : AppCompatActivity(), ItemClickListenerCallBack {
         grantResults: IntArray
     ) {
 
-        if (requestCode == REQUEST_CODE_PERMISSIONS) {
+        if (requestCode == PERMISSION_REQUEST_CODE) {
             if (allPermissionsGranted()) {
                 loadRecycview()
             } else {

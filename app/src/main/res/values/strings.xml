@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">ApiCallingWithRetrofit</string>
     <string name="univerity_name">University name</string>
+
+    <string name="permission_required">Internet access is required to display the Data.</string>
+    <string name="ok">OK</string>
+    <string name="permission_granted">Permission is granted. You can use the App now.</string>
 </resources>
